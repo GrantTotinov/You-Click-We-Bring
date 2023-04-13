@@ -23,42 +23,42 @@ namespace GrantFoods6.Helpers
                     CategoryID = 1,
                     CategoryName = "Burger",
                     CategoryPoster = "MainBurger",
-                    ImageUrl=""
+                    ImageUrl="Burger.png"
                 },
                 new Category
                 {
                     CategoryID = 2,
                     CategoryName = "Pizza",
                     CategoryPoster = "MainPizza",
-                    ImageUrl=""
+                    ImageUrl="Pizza.png"
                 },
                 new Category
                 {
                     CategoryID = 3,
                     CategoryName = "Desert",
                     CategoryPoster = "MainDesert",
-                    ImageUrl=""
+                    ImageUrl="Dessert.png"
                 },
                 new Category
                 {
                     CategoryID = 4,
                     CategoryName = "VegBurger",
                     CategoryPoster = "MainBurger",
-                    ImageUrl=""
+                    ImageUrl="Burger.png"
                 },
                 new Category
                 {
                     CategoryID = 5,
                     CategoryName = "Veg Pizza",
-                    CategoryPoster = "MainBurger",
-                    ImageUrl=""
+                    CategoryPoster = "MainPizza",
+                    ImageUrl="Pizza.png"
                 },
                 new Category
                 {
                     CategoryID = 6,
                     CategoryName = "Cakes",
-                    CategoryPoster = "MainCakes",
-                    ImageUrl=""
+                    CategoryPoster = "MainDessert",
+                    ImageUrl="Dessert.png"
                 }
 
             };

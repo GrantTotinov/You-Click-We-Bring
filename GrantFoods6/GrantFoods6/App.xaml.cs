@@ -1,5 +1,6 @@
 ﻿using GrantFoods6.Views;
 using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,9 +13,17 @@ namespace GrantFoods6
             InitializeComponent();
 
             //MainPage = new MainPage();
-
             //MainPage = new LoginView();
-            MainPage = new NavigationPage(new SettingsPage());
+            //MainPage = new NavigationPage(new SettingsPage());
+            string uname = Preferences.Get("Username", String.Empty);
+            if (String.IsNullOrEmpty(uname))
+            {
+                MainPage = new LoginView();
+            }
+            else
+            {
+                MainPage = new ProductsView();
+            }
 
         }
 

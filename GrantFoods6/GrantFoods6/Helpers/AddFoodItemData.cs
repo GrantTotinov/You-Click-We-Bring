@@ -23,96 +23,96 @@ namespace GrantFoods6.Helpers
                 {
                     ProductID = 1,
                     CategoryID = 1,
-                    ImageUrl = "",
+                    ImageUrl = "MainBurger",
                     Name = "ChefBurger1",
                     Description = "Fast Food",
                     Rating = "4.8",
                     RatingDetail = "(33 213 raitigs)",
-                    Homeselected = "CompleteHeart",
+                    HomeSelected = "CompleteHeart",
                     Price = 45
                 },
                 new FoodItem
                 {
                     ProductID = 2,
                     CategoryID = 1,
-                    ImageUrl = "",
+                    ImageUrl = "MainBurger",
                     Name = "ChefBurger2",
                     Description = "Fast Food",
                     Rating = "4.8",
                     RatingDetail = "(33 213 raitigs)",
-                    Homeselected = "CompleteHeart",
+                    HomeSelected = "CompleteHeart",
                     Price = 45
                 },
                 new FoodItem
                 {
                     ProductID = 3,
                     CategoryID = 1,
-                    ImageUrl = "",
+                    ImageUrl = "MainBurger",
                     Name = "ChefBurger3",
                     Description = "Fast Food",
-                    Rating = "4.8",
+                    Rating = "4.2",
                     RatingDetail = "(33 213 raitigs)",
-                    Homeselected = "CompleteHeart",
+                    HomeSelected = "CompleteHeart",
                     Price = 45
                 },
                 new FoodItem
                 {
                     ProductID = 4,
                     CategoryID = 1,
-                    ImageUrl = "",
+                    ImageUrl = "MainBurger",
                     Name = "ChefBurger4",
                     Description = "Fast Food",
-                    Rating = "4.8",
+                    Rating = "4.1",
                     RatingDetail = "(33 213 raitigs)",
-                    Homeselected = "CompleteHeart",
+                    HomeSelected = "CompleteHeart",
                     Price = 45
                 },
                 new FoodItem
                 {
                     ProductID = 5,
                     CategoryID = 2,
-                    ImageUrl = "",
-                    Name = "ChefBurger5",
+                    ImageUrl = "MainPizza",
+                    Name = "AlexPizza1",
                     Description = "Fast Food",
-                    Rating = "4.8",
+                    Rating = "4.3",
                     RatingDetail = "(33 213 raitigs)",
-                    Homeselected = "CompleteHeart",
+                    HomeSelected = "CompleteHeart",
                     Price = 45
                 },
                 new FoodItem
                 {
                     ProductID = 6,
                     CategoryID = 2,
-                    ImageUrl = "",
-                    Name = "ChefBurger6",
+                    ImageUrl = "MainPizza",
+                    Name = "AladinPizza2",
                     Description = "Fast Food",
-                    Rating = "4.8",
+                    Rating = "4.2",
                     RatingDetail = "(33 213 raitigs)",
-                    Homeselected = "CompleteHeart",
+                    HomeSelected = "CompleteHeart",
                     Price = 45
                 },
                 new FoodItem
                 {
                     ProductID = 7,
                     CategoryID = 3,
-                    ImageUrl = "",
-                    Name = "ChefBurger7",
+                    ImageUrl = "MainDessert",
+                    Name = "Ice Creams",
                     Description = "Fast Food",
-                    Rating = "4.8",
+                    Rating = "4.4",
                     RatingDetail = "(33 213 raitigs)",
-                    Homeselected = "CompleteHeart",
+                    HomeSelected = "CompleteHeart",
                     Price = 45
                 },
                 new FoodItem
                 {
                     ProductID = 8,
                     CategoryID = 3,
-                    ImageUrl = "",
-                    Name = "ChefBurger8",
-                    Description = "Fast Food",
+                    ImageUrl = "MainDessert",
+                    Name = "Cakes",
+                    Description = "Niko Palachinki",
                     Rating = "4.8",
                     RatingDetail = "(33 213 raitigs)",
-                    Homeselected = "CompleteHeart",
+                    HomeSelected = "CompleteHeart",
                     Price = 45
                 },
             };
@@ -129,7 +129,7 @@ namespace GrantFoods6.Helpers
                         CategoryID = item.CategoryID,
                         ProductID = item.ProductID,
                         Description = item.Description,
-                        Homeselected = item.Homeselected,
+                        HomeSelected = item.HomeSelected,
                         ImageUrl = item.ImageUrl,
                         Name = item.Name,
                         Price = item.Price,
