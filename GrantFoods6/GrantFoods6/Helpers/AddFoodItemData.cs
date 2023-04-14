@@ -3,7 +3,6 @@ using Firebase.Database.Query;
 using GrantFoods6.Models;
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -23,7 +22,7 @@ namespace GrantFoods6.Helpers
                 {
                     ProductID = 1,
                     CategoryID = 1,
-                    ImageUrl = "MainBurger",
+                    ImageUrl = "MainBurger.jpg",
                     Name = "ChefBurger1",
                     Description = "Fast Food",
                     Rating = "4.8",
@@ -35,7 +34,7 @@ namespace GrantFoods6.Helpers
                 {
                     ProductID = 2,
                     CategoryID = 1,
-                    ImageUrl = "MainBurger",
+                    ImageUrl = "MainBurger.jpg",
                     Name = "ChefBurger2",
                     Description = "Fast Food",
                     Rating = "4.8",
@@ -47,7 +46,7 @@ namespace GrantFoods6.Helpers
                 {
                     ProductID = 3,
                     CategoryID = 1,
-                    ImageUrl = "MainBurger",
+                    ImageUrl = "MainBurger.jpg",
                     Name = "ChefBurger3",
                     Description = "Fast Food",
                     Rating = "4.2",
@@ -59,7 +58,7 @@ namespace GrantFoods6.Helpers
                 {
                     ProductID = 4,
                     CategoryID = 1,
-                    ImageUrl = "MainBurger",
+                    ImageUrl = "MainBurger.jpg",
                     Name = "ChefBurger4",
                     Description = "Fast Food",
                     Rating = "4.1",
@@ -71,7 +70,7 @@ namespace GrantFoods6.Helpers
                 {
                     ProductID = 5,
                     CategoryID = 2,
-                    ImageUrl = "MainPizza",
+                    ImageUrl = "MainPizza.jpeg",
                     Name = "AlexPizza1",
                     Description = "Fast Food",
                     Rating = "4.3",
@@ -83,7 +82,7 @@ namespace GrantFoods6.Helpers
                 {
                     ProductID = 6,
                     CategoryID = 2,
-                    ImageUrl = "MainPizza",
+                    ImageUrl = "MainPizza.jpeg",
                     Name = "AladinPizza2",
                     Description = "Fast Food",
                     Rating = "4.2",
@@ -95,7 +94,7 @@ namespace GrantFoods6.Helpers
                 {
                     ProductID = 7,
                     CategoryID = 3,
-                    ImageUrl = "MainDessert",
+                    ImageUrl = "MainDessert.jpg",
                     Name = "Ice Creams",
                     Description = "Fast Food",
                     Rating = "4.4",
@@ -107,7 +106,7 @@ namespace GrantFoods6.Helpers
                 {
                     ProductID = 8,
                     CategoryID = 3,
-                    ImageUrl = "MainDessert",
+                    ImageUrl = "MainDessert.jpg",
                     Name = "Cakes",
                     Description = "Niko Palachinki",
                     Rating = "4.8",
@@ -124,7 +123,7 @@ namespace GrantFoods6.Helpers
             {
                 foreach( var item in FoodItems)
                 {
-                    await client.Child("FoodsItems").PostAsync(new FoodItem()
+                    await client.Child("FoodItems").PostAsync(new FoodItem()
                     {
                         CategoryID = item.CategoryID,
                         ProductID = item.ProductID,

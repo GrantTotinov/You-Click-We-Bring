@@ -110,7 +110,7 @@ namespace GrantFoods6.ViewModels
                 Result = await userService.LoginUser(Username, Password);
                 if (Result)
                 {
-                    Preferences.Set("UserName", Username);
+                    Preferences.Set("Username", Username);
                     await Application.Current.MainPage.Navigation.PushModalAsync(new ProductsView());
                 }
                 else
