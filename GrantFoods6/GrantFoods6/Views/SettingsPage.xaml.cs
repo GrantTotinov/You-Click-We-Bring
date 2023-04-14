@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,16 @@ namespace GrantFoods6.Views
         {
             var afd = new AddFoodItemData();
             await afd.AddFoodItemsAsync();
+        }
+
+        private void ButtonCart_Clicked(object sender, EventArgs e)
+        {
+            var cct = new CreateCartTable();
+            if (cct.CreateTable())
+                DisplayAlert("Success", "Cart Table Created", "OK");
+            else
+                DisplayAlert("ERROR", "Error while creating table", "OK");
+                
         }
     }
 }
