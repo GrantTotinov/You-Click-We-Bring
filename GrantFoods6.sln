@@ -7,7 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrantFoods6.Android", "Gran
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrantFoods6.iOS", "GrantFoods6\GrantFoods6.iOS\GrantFoods6.iOS.csproj", "{F41AEE9E-A39D-44CB-8B4C-C7A85A2E6EA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrantFoods6", "GrantFoods6\GrantFoods6\GrantFoods6.csproj", "{B596EE1B-F7E0-45EE-AC28-111F4043BD7B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrantFoods6", "GrantFoods6\GrantFoods6\GrantFoods6.csproj", "{B596EE1B-F7E0-45EE-AC28-111F4043BD7B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2026C026-81E6-452E-AD78-72EB19AFCFE4}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

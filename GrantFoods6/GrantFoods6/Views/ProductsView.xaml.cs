@@ -22,5 +22,14 @@ namespace GrantFoods6.Views
             await Navigation.PushModalAsync(new CategoryView(category));
             ((CollectionView)sender).SelectedItem = null;
         }
+
+        async void CollectionView_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedProduct = e.CurrentSelection.FirstOrDefault() as FoodItem;
+            if (selectedProduct == null)
+                return;
+            await Navigation.PushModalAsync(new ProductDetailsView(selectedProduct));
+            ((CollectionView)sender).SelectedItem = null;
+        }
     }
 }

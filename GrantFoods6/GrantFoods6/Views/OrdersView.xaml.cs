@@ -10,17 +10,23 @@ using Xamarin.Forms.Xaml;
 namespace GrantFoods6.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CartView : ContentPage
+    public partial class OrdersView : ContentPage
     {
-        public CartView()
+        public OrdersView(string id)
         {
             InitializeComponent();
             LabelName.Text = "Welcome " + Preferences.Get("Username", "Guest");
+            LabelOrderID.Text = id;
         }
 
-        async  void ImageButton_Clicked(object sender, EventArgs e)
+        async void ImageButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PopModalAsync();
+        }
+
+        async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new ProductsView());
         }
     }
 }

@@ -1,11 +1,14 @@
-﻿using GrantFoods6.Models;
+﻿using GrantFoods6.Helpers;
+using GrantFoods6.Models;
 using GrantFoods6.Services;
 using GrantFoods6.Views;
+using SQLitePCL;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -55,7 +58,17 @@ namespace GrantFoods6.ViewModels
             else
                 UserName = uname;
 
+            // if tablicata ne sushtestvuva
+            // da se napravi nova tablica i da se vzeme count
+            //else ->
+            var cct = new CreateCartTable();
+            if (cct == null)
+            {
+                cct.CreateTable();
+            }
+            
             UserCartItemsCount = new CartItemService().GetUserCartCount();
+             
 
             Categories = new ObservableCollection<Category>();
             LatestItems = new ObservableCollection<FoodItem>();

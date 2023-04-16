@@ -16,5 +16,10 @@ namespace GrantFoods6.Views
         {
             InitializeComponent();
         }
+
+        async void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
     }
 }

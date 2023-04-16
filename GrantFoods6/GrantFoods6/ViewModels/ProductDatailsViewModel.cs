@@ -72,36 +72,43 @@ namespace GrantFoods6.ViewModels
 
         private void AddToCart()
         {
-            var cn = DependencyService.Get<ISQLite>().GetConnection();
-            try
+            if (TotalQuantity > 0)
             {
-                CartItem ci = new CartItem()
+                var cn = DependencyService.Get<ISQLite>().GetConnection();
+                try
                 {
-                    ProductId = SelectedFoodItem.ProductID,
-                    ProductName = SelectedFoodItem.Name,
-                    Price = SelectedFoodItem.Price,
-                    Quantity = TotalQuantity
-                };
-                var item = cn.Table<CartItem>().ToList().FirstOrDefault(c => c.ProductId == SelectedFoodItem.ProductID);
-                if (item == null)
-                    cn.Insert(ci);
-                else
-                {
-                    item.Quantity += TotalQuantity;
-                    cn.Update(item);
-                }
-                cn.Commit();
-                cn.Close();
-                Application.Current.MainPage.DisplayAlert("Cart","Selected Item is Added to the Cart", "OK");
+                    CartItem ci = new CartItem()
+                    {
+                        ProductId = SelectedFoodItem.ProductID,
+                        ProductName = SelectedFoodItem.Name,
+                        Price = SelectedFoodItem.Price,
+                        Quantity = TotalQuantity
+                    };
+                    var item = cn.Table<CartItem>().ToList().FirstOrDefault(c => c.ProductId == SelectedFoodItem.ProductID);
+                    if (item == null)
+                        cn.Insert(ci);
+                    else
+                    {
+                        item.Quantity += TotalQuantity; // Tova dobavq quantity na sushtiq item
+                        cn.Update(item);
+                    }
+                    cn.Commit();
+                    cn.Close();
+                    Application.Current.MainPage.DisplayAlert("Cart", "Selected Item is Added to the Cart", "OK");
 
+                }
+                catch (Exception ex)
+                {
+                    Application.Current.MainPage.DisplayAlert("ERROR", ex.Message, "OK");
+                }
+                finally
+                {
+                    cn.Close();
+                }
             }
-            catch (Exception ex)
+            else
             {
-                Application.Current.MainPage.DisplayAlert("ERROR", ex.Message, "OK");
-            }
-            finally
-            {
-                cn.Close();
+                Application.Current.MainPage.DisplayAlert("You Need To Choose Item","ERROR", "OK");
             }
         }
 

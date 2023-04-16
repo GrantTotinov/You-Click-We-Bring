@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GrantFoods6.Helpers;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -31,7 +32,7 @@ namespace GrantFoods6.Views
             await afd.AddFoodItemsAsync();
         }
 
-        private void ButtonCart_Clicked(object sender, EventArgs e)
+        void ButtonCart_Clicked(object sender, EventArgs e)
         {
             var cct = new CreateCartTable();
             if (cct.CreateTable())

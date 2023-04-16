@@ -143,7 +143,9 @@
             <CollectionView ItemsSource="{Binding LatestItems}"
                             Margin="0,20,10,0"
                             VerticalOptions="Start"
+                            SelectionChanged="CollectionView_SelectionChanged_1"
                             VerticalScrollBarVisibility="Never"
+                            SelectionMode="Single"
                             Grid.Row="4">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
