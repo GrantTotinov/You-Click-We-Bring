@@ -127,6 +127,9 @@
     <PackageReference Include="sqlite-net-pcl">
       <Version>1.8.116</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.CommunityToolkit">
+      <Version>2.0.5</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2578" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.5" />
     <PackageReference Include="Xamarin.Forms.PancakeView">
@@ -184,5 +187,8 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\LandingPageBurgerVideo.mp4" />
   </ItemGroup>
 </Project>

@@ -15,7 +15,12 @@ namespace GrantFoods6
             //MainPage = new MainPage();
             //MainPage = new LoginView();
             //MainPage = new NavigationPage(new SettingsPage());
-            string uname = Preferences.Get("Username", String.Empty);
+            Device.SetFlags(new string[] { "MediaElement_Experimental", "Brush_Experimental", "IndicatorView_Experimental","Shapes_Experimental" });
+
+            MainPage = new RegisterView();
+
+
+            /*string uname = Preferences.Get("Username", String.Empty);
             if (String.IsNullOrEmpty(uname))
             {
                 MainPage = new LoginView();
@@ -23,7 +28,7 @@ namespace GrantFoods6
             else
             {
                 MainPage = new ProductsView();
-            }
+            }*/
 
         }
 

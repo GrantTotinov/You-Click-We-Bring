@@ -21,7 +21,7 @@ namespace GrantFoods6.Helpers
                 new Category
                 {
                     CategoryID = 1,
-                    CategoryName = "Burger",
+                    CategoryName = "Burgers",
                     CategoryPoster = "MainBurger",
                     ImageUrl="Burger.png"
                 },
@@ -35,21 +35,21 @@ namespace GrantFoods6.Helpers
                 new Category
                 {
                     CategoryID = 3,
-                    CategoryName = "Desert",
+                    CategoryName = "Sushi",
                     CategoryPoster = "MainDesert",
                     ImageUrl="Dessert.png"
                 },
                 new Category
                 {
                     CategoryID = 4,
-                    CategoryName = "VegBurger",
+                    CategoryName = "Cakes",
                     CategoryPoster = "MainBurger",
                     ImageUrl="Burger.png"
                 },
                 new Category
                 {
                     CategoryID = 5,
-                    CategoryName = "Veg Pizza",
+                    CategoryName = "PanCakes",
                     CategoryPoster = "MainPizza",
                     ImageUrl="Pizza.png"
                 },
@@ -57,6 +57,13 @@ namespace GrantFoods6.Helpers
                 {
                     CategoryID = 6,
                     CategoryName = "Cakes",
+                    CategoryPoster = "MainDessert",
+                    ImageUrl="Dessert.png"
+                },
+                 new Category
+                {
+                    CategoryID = 7,
+                    CategoryName = "Vegan",
                     CategoryPoster = "MainDessert",
                     ImageUrl="Dessert.png"
                 }

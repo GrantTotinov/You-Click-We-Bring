@@ -41,17 +41,45 @@ namespace GrantFoods6.ViewModels
             }
         }
 
-        private bool _IsBusy;
-        public bool IsBusy
+        private string _Email;
+        public string Email
         {
             set
             {
-                this._IsBusy = value;
+                this._Email = value;
                 OnPropertyChanged();
             }
             get
             {
-                return this._IsBusy;
+                return this._Email;
+            }
+        }
+
+        private string _Phone;
+        public string Phone
+        {
+            set
+            {
+                this._Phone = value;
+                OnPropertyChanged();
+            }
+            get
+            {
+                return this._Phone;
+            }
+        }
+
+        private string _Address;
+        public string Address
+        {
+            set
+            {
+                this._Address = value;
+                OnPropertyChanged();
+            }
+            get
+            {
+                return this._Address;
             }
         }
 
@@ -69,6 +97,22 @@ namespace GrantFoods6.ViewModels
             }
         }
 
+        private bool _IsBusy;
+        public bool IsBusy
+        {
+            set
+            {
+                this._IsBusy = value;
+                OnPropertyChanged();
+            }
+            get
+            {
+                return this._IsBusy;
+            }
+        }
+
+       
+
         public Command LoginCommand { get; set; }
         public Command RegisterCommand { get; set; }
         public LoginViewModel()
@@ -85,7 +129,7 @@ namespace GrantFoods6.ViewModels
             {
                 IsBusy = true;
                 var userService = new UserService();
-                Result = await userService.RegisterUser(Username, Password);
+                Result = await userService.RegisterUser(Username, Password, Email, Phone, Address);
                 if (Result)
                     await Application.Current.MainPage.DisplayAlert("Success", "User Registred", "OK");
                 else

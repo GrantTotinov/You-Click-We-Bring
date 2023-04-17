@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 
 namespace GrantFoods6.Services
 {
@@ -23,14 +24,17 @@ namespace GrantFoods6.Services
             return (user != null);
         }
 
-        public async Task<bool> RegisterUser(string uname, string passwd)
+        public async Task<bool> RegisterUser(string uname, string passwd, string email, string phone, string address)
         {
             if (await IsUserExists(uname) == false)
             {
                 await client.Child("Users").PostAsync(new User()
                 {
                     Username = uname,
-                    Password = passwd
+                    Password = passwd,
+                    Email = email,
+                    Phone = phone,
+                    Address = address
                 });
                 return true;
             }
